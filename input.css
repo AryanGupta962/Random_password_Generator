@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: poppins ,sans-serif;
+}
+
+/* .before-checkbox{
+    @apply after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0
+    after:bg-transparent after:border-blue-600 after:border-2 after:rounded-sm after:visible
+    
+} */
+
+input[type="checkbox"]:checked + label span{
+  @apply  before:content-['✔'] relative before:absolute 
+  before:-top-[6px] before:-left-[1px]  before:scale-[.8] before:text-black bg-cyan-300
+}
