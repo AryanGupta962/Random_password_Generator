@@ -29,11 +29,11 @@ function randomNumberGenerator(min,max){
 
 
 generatePassword.addEventListener('click',()=>{
+    let sliderval=Number(slidervalue.innerHTML);
+    let cpysliderval=sliderval
     if(cbox1.checked==true||cbox2.checked==true||cbox3.checked==true||cbox4.checked==true)
         {
     let passwordStr="";
-    let sliderval=Number(slidervalue.innerHTML);
-    let cpysliderval=sliderval
     //console.log(typeof sliderval);
         if(cbox1.checked===true&&sliderval>0){
             passwordStr+=String.fromCharCode(randomNumberGenerator(65,90));
@@ -82,8 +82,8 @@ generatePassword.addEventListener('click',()=>{
                 sliderval--;
             }
             inputtext.value=passwordStr
-        console.log(passwordStr); 
-        console.log(passwordStr.length); 
+       // console.log(passwordStr); 
+        //console.log(passwordStr.length); 
            if(cbox1.checked==true||cbox2.checked==true||cbox3.checked==true||cbox4.checked==true||
                cbox1.checked==true&&cbox2.checked==true||cbox1.checked==true&&cbox3.checked==true||
             cbox1.checked==true&&cbox4.checked==true||cbox2.checked==true&&cbox3.checked==true||
@@ -92,14 +92,14 @@ generatePassword.addEventListener('click',()=>{
            {
             if(cpysliderval>6){
                 console.log("In circle");
-                circle.classList.remove('bg-[#e7d2d2]','drop-shadow-[0_0_0.50rem_#ffffff]')
+                circle.classList.remove('bg-gray-300','drop-shadow-[0_0_0.50rem_white]')
                 circle.classList.remove('bg-red-600','drop-shadow-[0_0_0.50rem_red]')
-                circle.classList.add('bg-green-600','drop-shadow-[0_0_0.50rem_green]')
+                circle.classList.add('bg-green-600','drop-shadow-[0_0_0.50rem_#00ff00]')
             }
             else {
-                 circle.classList.remove('bg-[#e7d2d2]','drop-shadow-[0_0_0.50rem_#ffffff]')
+           circle.classList.remove('bg-gray-300','drop-shadow-[0_0_0.50rem_white]')
            circle.classList.remove('bg-green-600','drop-shadow-[0_0_0.50rem_#00ff00]')
-                circle.classList.remove('bg-green-600','drop-shadow-[0_0_0.50rem_green]')
+            circle.classList.add('bg-red-600','drop-shadow-[0_0_0.50rem_red]')
             }
            }
         }
