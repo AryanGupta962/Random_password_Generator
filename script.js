@@ -84,16 +84,23 @@ generatePassword.addEventListener('click',()=>{
             inputtext.value=passwordStr
         console.log(passwordStr); 
         console.log(passwordStr.length); 
-           if(cbox1.checked==true&&cbox2.checked==true||cbox1.checked==true&&cbox3.checked==true||
+           if(cbox1.checked==true||cbox2.checked==true||cbox3.checked==true||cbox4.checked==true||
+               cbox1.checked==true&&cbox2.checked==true||cbox1.checked==true&&cbox3.checked==true||
             cbox1.checked==true&&cbox4.checked==true||cbox2.checked==true&&cbox3.checked==true||
             cbox2.checked==true&&cbox4.checked==true||cbox3.checked==true&&cbox4.checked==true
            )
            {
             if(cpysliderval>6){
                 console.log("In circle");
+                circle.classList.remove('bg-[#e7d2d2]','drop-shadow-[0_0_0.50rem_#ffffff]')
+                circle.classList.remove('bg-red-600','drop-shadow-[0_0_0.50rem_red]')
                 circle.classList.add('bg-green-600','drop-shadow-[0_0_0.50rem_green]')
             }
-            else circle.classList.remove('bg-green-600','drop-shadow-[0_0_0.50rem_green]')
+            else {
+                 circle.classList.remove('bg-[#e7d2d2]','drop-shadow-[0_0_0.50rem_#ffffff]')
+           circle.classList.remove('bg-green-600','drop-shadow-[0_0_0.50rem_#00ff00]')
+                circle.classList.remove('bg-green-600','drop-shadow-[0_0_0.50rem_green]')
+            }
            }
         }
 })
